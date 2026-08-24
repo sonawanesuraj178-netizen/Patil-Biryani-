@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <linearGradient id="emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)" stroke="#334155" stroke-width="8"/>
+  <circle cx="256" cy="256" r="210" fill="none" stroke="url(#gold)" stroke-width="4" stroke-dasharray="12 8" opacity="0.4"/>
+  
+  <!-- Handi / Pot Base -->
+  <path d="M128 260 C128 370, 384 370, 384 260 L370 230 C340 240, 172 240, 142 230 Z" fill="url(#gold)"/>
+  <!-- Pot Rim -->
+  <ellipse cx="256" cy="230" rx="120" ry="24" fill="#fbbf24" stroke="#d97706" stroke-width="6"/>
+  <!-- Pot Lid / Dum Steam Dome -->
+  <path d="M166 220 C180 150, 332 150, 346 220 Z" fill="url(#emerald)" opacity="0.9"/>
+  <circle cx="256" cy="142" r="16" fill="#fbbf24"/>
+  
+  <!-- Steam Curves -->
+  <path d="M210 115 Q200 85 220 60" fill="none" stroke="#f59e0b" stroke-width="6" stroke-linecap="round"/>
+  <path d="M256 110 Q270 80 256 50" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round"/>
+  <path d="M302 115 Q312 85 292 60" fill="none" stroke="#f59e0b" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Text Label -->
+  <text x="256" y="420" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-weight="900" font-size="34" letter-spacing="4">PATIL BIRYANI</text>
+  <text x="256" y="455" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-weight="700" font-size="18" letter-spacing="2">POS &amp; FINANCE</text>
+</svg>

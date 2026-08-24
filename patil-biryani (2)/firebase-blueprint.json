@@ -1,0 +1,34 @@
+{
+  "entities": {
+    "posState": {
+      "title": "POS State Document",
+      "description": "Real-time synchronized data store document for Patil Biryani POS across mobile and desktop",
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "description": "Serialized data payload for the section"
+        },
+        "updatedAt": {
+          "type": "number",
+          "description": "Timestamp in milliseconds when the state was last modified"
+        },
+        "clientId": {
+          "type": "string",
+          "description": "Originating client identifier"
+        },
+        "key": {
+          "type": "string",
+          "description": "State category key"
+        }
+      },
+      "required": ["updatedAt"]
+    }
+  },
+  "firestore": {
+    "/patil_biryani_store/{key}": {
+      "schema": "posState",
+      "description": "Real-time synced POS collections and state documents"
+    }
+  }
+}

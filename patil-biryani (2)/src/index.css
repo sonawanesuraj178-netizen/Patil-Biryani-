@@ -1,0 +1,543 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Allow text selection specifically for inputs, textareas, and explicit selectable text */
+  input,
+  textarea,
+  [contenteditable="true"],
+  .select-text,
+  .selectable-text,
+  .printable-document {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+  img, a, svg {
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background: radial-gradient(circle at 15% 10%, rgba(16, 185, 129, 0.07) 0%, transparent 45%),
+                radial-gradient(circle at 85% 15%, rgba(20, 184, 166, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.04) 0%, transparent 50%),
+                #070b13;
+    color: #f1f5f9;
+    min-height: 100vh;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Frosted Glass Theme Classes - Optimized with GPU Compositing for 60FPS Smoothness */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transform: translateZ(0);
+}
+
+.glass-panel {
+  background: rgba(13, 20, 36, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.55), 0 0 1px 1px rgba(255, 255, 255, 0.04) inset;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.glass-panel-elevated {
+  background: rgba(18, 28, 48, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgba(255, 255, 255, 0.08) inset;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.glass-nav {
+  background: rgba(10, 16, 30, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.55), 0 0 20px rgba(16, 185, 129, 0.08);
+  transform: translateZ(0);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+  transform: translateZ(0);
+}
+
+.glass-card:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 10px 25px -6px rgba(0, 0, 0, 0.5), 0 0 16px rgba(16, 185, 129, 0.08);
+}
+
+.glass-card-static {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.4);
+  transform: translateZ(0);
+}
+
+.glass-active {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #6ee7b7;
+}
+
+.accent-gradient {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.accent-gradient-text {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* UI Version 4.5 Modern Glow & Tactile Classes */
+.glow-emerald {
+  box-shadow: 0 0 25px -4px rgba(16, 185, 129, 0.25);
+}
+
+.glow-teal {
+  box-shadow: 0 0 25px -4px rgba(20, 184, 166, 0.25);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -4px rgba(6, 182, 212, 0.25);
+}
+
+.badge-pro {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(20, 184, 166, 0.12));
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34d399;
+}
+
+.interactive-pill {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-pill:hover {
+  transform: translateY(-1px);
+}
+
+.interactive-pill:active {
+  transform: scale(0.96);
+}
+
+.glass-input {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  border-radius: 0.75rem;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+  transform: translateZ(0);
+}
+
+.glass-input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  outline: none;
+}
+
+/* Upgraded Select Styles across the entire application */
+select, .glass-select {
+  appearance: none;
+  background-color: rgba(15, 23, 42, 0.85);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2334d399' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.1em;
+  padding-right: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f8fafc;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+select:hover, .glass-select:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+select:focus, .glass-select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+  outline: none;
+}
+
+select option {
+  background-color: #0b1120;
+  color: #f1f5f9;
+  padding: 10px;
+}
+
+/* Custom Dropdown Stacking Context & High Z-Index Layering */
+.custom-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-popover,
+.custom-dropdown-popover {
+  z-index: 999999 !important;
+  isolation: isolate;
+  background-color: #020617 !important;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+/* Ensure no text or cards bleed through custom dropdown items */
+.custom-dropdown-option {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile APK Ergonomic Styles */
+@media (max-width: 768px) {
+  button, input, select, textarea {
+    min-height: 40px;
+  }
+  .apk-safe-bottom {
+    padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 72px);
+  }
+}
+
+/* Fast Rendering for Dense Lists & Grids */
+.fast-list-render {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 60px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 15, 28, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.5);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* High-Precision Print Styles for Invoices, Thermal Receipts & PDF Exports */
+@media print {
+  @page {
+    margin: 4mm;
+    size: auto;
+  }
+
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: auto !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print,
+  .no-print-area,
+  .modal-backdrop,
+  header:not(.print-header),
+  nav,
+  aside,
+  button:not(.print-include) {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* Printable Canvas & Document Frame */
+  .printable-document,
+  .printable-page,
+  .printable-receipt,
+  .pdf-export-container,
+  .invoice-print-container,
+  .print-container,
+  [data-printable="true"] {
+    position: relative !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Natural flow for Header Section */
+  .print-header,
+  .printable-header,
+  .invoice-header-section {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    border-bottom: 1px dashed #000000 !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 8px !important;
+    overflow: visible !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Natural flow for Body & Items Table */
+  .print-body,
+  .print-content,
+  .printable-body,
+  .invoice-body-section {
+    display: block !important;
+    position: static !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+
+  /* Natural flow for Financial Totals Section */
+  .print-totals,
+  .printable-totals,
+  .print-total-section,
+  .invoice-totals-section {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    border-top: 1px dashed #000000 !important;
+    padding-top: 6px !important;
+    margin-top: 6px !important;
+    margin-bottom: 8px !important;
+    overflow: visible !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Natural flow for Footer Section */
+  .print-footer,
+  .printable-footer,
+  .invoice-footer-section {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    border-top: 1px dashed #000000 !important;
+    padding-top: 6px !important;
+    margin-top: 6px !important;
+    overflow: visible !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Universal Text-Cutting and Truncation Prevention for Print */
+  .printable-document *,
+  .printable-page *,
+  .printable-receipt *,
+  .pdf-export-container *,
+  .invoice-print-container *,
+  .print-header *,
+  .print-body *,
+  .print-totals *,
+  .print-footer * {
+    overflow: visible !important;
+    text-overflow: clip !important;
+    max-height: none !important;
+  }
+
+  .print-text-wrap,
+  .printable-document p,
+  .printable-document span,
+  .printable-document div {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
+  /* High-Precision Table Formatting & Page-Break Safeguards */
+  .print-table,
+  .printable-document table,
+  .print-body table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-variant-numeric: tabular-nums !important;
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+    table-layout: auto !important;
+  }
+
+  .print-table thead,
+  .printable-document table thead {
+    display: table-header-group !important;
+  }
+
+  .print-table tfoot,
+  .printable-document table tfoot {
+    display: table-footer-group !important;
+  }
+
+  .print-table tr,
+  .printable-document table tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .print-table th,
+  .print-table td,
+  .printable-document table th,
+  .printable-document table td {
+    padding: 3px 2px !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* Strict Non-wrapping for numeric amounts and rates */
+  .print-numeric,
+  .print-table td.text-right,
+  .print-table th.text-right,
+  .print-totals span:last-child {
+    white-space: nowrap !important;
+    font-variant-numeric: tabular-nums !important;
+  }
+}
+
+/* Shimmer Loading Animations for Skeletons */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 41, 59, 0.45) 0%,
+    rgba(51, 65, 85, 0.75) 50%,
+    rgba(30, 41, 59, 0.45) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+}
+
+.animate-shimmer-emerald {
+  background: linear-gradient(
+    90deg,
+    rgba(16, 185, 129, 0.05) 0%,
+    rgba(16, 185, 129, 0.18) 50%,
+    rgba(16, 185, 129, 0.05) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+}
+
+.skeleton-box {
+  background-color: rgba(30, 41, 59, 0.6);
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite ease-in-out;
+}
+

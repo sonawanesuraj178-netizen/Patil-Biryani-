@@ -1,0 +1,18 @@
+{
+  "name": "PATIL BIRYANI - POS & Financial Manager",
+  "short_name": "Patil Biryani",
+  "description": "Restaurant POS, Plate Sales, Billing & Financial Management for Patil Biryani",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#10b981",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

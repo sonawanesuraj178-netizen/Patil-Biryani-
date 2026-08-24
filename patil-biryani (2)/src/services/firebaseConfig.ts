@@ -1,0 +1,10 @@
+export const firebaseConfig = {
+  apiKey: "AIzaSyDummyKeyForDevelopmentEnvironment12345",
+  authDomain: "af82a71f-178c-4bb5-9086-8c783f0aa37e.firebaseapp.com",
+  projectId: "patil-biryani-pos",
+  storageBucket: "patil-biryani-pos.appspot.com",
+  messagingSenderId: "491594008566",
+  appId: "1:491594008566:web:af82a71f178c4bb5"
+};
+
+export default firebaseConfig;

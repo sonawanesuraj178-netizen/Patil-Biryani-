@@ -1,0 +1,6 @@
+{
+  "name": "PATIL BIRYANI",
+  "description": "Business Management, POS, Financial & Staff Management Application for Patil Biryani",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
